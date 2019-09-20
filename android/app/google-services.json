@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1036520050743",
+    "firebase_url": "https://simbashare-63e1d.firebaseio.com",
+    "project_id": "simbashare-63e1d",
+    "storage_bucket": "simbashare-63e1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036520050743:android:872a036a6fa41e2a",
+        "android_client_info": {
+          "package_name": "com.example.simba_share"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036520050743-movjpj53cj1q4t9cos7vm4s4cp5ki3ug.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5R79isAhtJswfu-1T0P5DXcc6ofefeWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036520050743-movjpj53cj1q4t9cos7vm4s4cp5ki3ug.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1036520050743-lo7d90omv7umshikek4etu48p1ds8ing.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mbingi.simbashare"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
