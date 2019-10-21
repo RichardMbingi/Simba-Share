@@ -4,14 +4,20 @@ import 'package:simba_share/designCourse/popularCourseListView.dart';
 import 'package:simba_share/main.dart';
 import 'package:flutter/material.dart';
 import 'designCourseAppTheme.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class DesignCourseHomeScreen extends StatefulWidget {
+
+  const DesignCourseHomeScreen({Key key,@required this.user}) : super(key: key);
+
+  final AuthResult user;
+
   @override
   _DesignCourseHomeScreenState createState() => _DesignCourseHomeScreenState();
 }
 
 class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
-  CategoryType categoryType = CategoryType.ui;
+  CategoryType categoryType = CategoryType.favourites;
 
   @override
   Widget build(BuildContext context) {
@@ -73,17 +79,17 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
           padding: const EdgeInsets.only(left: 16, right: 16),
           child: Row(
             children: <Widget>[
-              getButtonUI(CategoryType.ui, categoryType == CategoryType.ui),
+              getButtonUI(CategoryType.favourites, categoryType == CategoryType.favourites),
               SizedBox(
                 width: 16,
               ),
               getButtonUI(
-                  CategoryType.coding, categoryType == CategoryType.coding),
+                  CategoryType.gainers, categoryType == CategoryType.gainers),
               SizedBox(
                 width: 16,
               ),
               getButtonUI(
-                  CategoryType.basic, categoryType == CategoryType.basic),
+                  CategoryType.losers, categoryType == CategoryType.losers),
             ],
           ),
         ),
@@ -107,7 +113,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
-            "Popular Course",
+            "Featured",
             textAlign: TextAlign.left,
             style: TextStyle(
               fontWeight: FontWeight.w600,
@@ -139,12 +145,12 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
 
   Widget getButtonUI(CategoryType categoryTypeData, bool isSelected) {
     var txt = '';
-    if (CategoryType.ui == categoryTypeData) {
-      txt = 'Ui/Ux';
-    } else if (CategoryType.coding == categoryTypeData) {
-      txt = 'Coding';
-    } else if (CategoryType.basic == categoryTypeData) {
-      txt = 'Basic UI';
+    if (CategoryType.favourites == categoryTypeData) {
+      txt = 'Favourites';
+    } else if (CategoryType.gainers == categoryTypeData) {
+      txt = 'Gainers';
+    } else if (CategoryType.losers == categoryTypeData) {
+      txt = 'Losers';
     }
     return Expanded(
       child: Container(
@@ -224,7 +230,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                           ),
                           keyboardType: TextInputType.text,
                           decoration: new InputDecoration(
-                            labelText: 'Search for course',
+                            labelText: 'Search for stock',
                             border: InputBorder.none,
                             helperStyle: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -271,7 +277,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  "Choose your",
+                  "Date",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
@@ -281,7 +287,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                   ),
                 ),
                 Text(
-                  "Design Course",
+                  "User Name",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -305,7 +311,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
 }
 
 enum CategoryType {
-  ui,
-  coding,
-  basic,
+  favourites,
+  gainers,
+  losers,
 }

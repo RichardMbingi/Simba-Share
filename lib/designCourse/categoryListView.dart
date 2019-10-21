@@ -157,7 +157,7 @@ class CategoryView extends StatelessWidget {
                                                   CrossAxisAlignment.center,
                                               children: <Widget>[
                                                 Text(
-                                                  "${category.lessonCount} lesson",
+                                                  "${category.lessonCount} holding",
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
                                                     fontWeight: FontWeight.w200,
@@ -171,7 +171,7 @@ class CategoryView extends StatelessWidget {
                                                   child: Row(
                                                     children: <Widget>[
                                                       Text(
-                                                        "${category.rating}",
+                                                        "${category.change}",
                                                         textAlign:
                                                             TextAlign.left,
                                                         style: TextStyle(
@@ -185,7 +185,7 @@ class CategoryView extends StatelessWidget {
                                                         ),
                                                       ),
                                                       Icon(
-                                                        Icons.star,
+                                                        Icons.arrow_downward,
                                                         color:
                                                             DesignCourseAppTheme
                                                                 .nearlyBlue,
@@ -208,7 +208,7 @@ class CategoryView extends StatelessWidget {
                                                   CrossAxisAlignment.start,
                                               children: <Widget>[
                                                 Text(
-                                                  "\$${category.money}",
+                                                  "${category.ltp}",
                                                   textAlign: TextAlign.left,
                                                   style: TextStyle(
                                                     fontWeight: FontWeight.w600,

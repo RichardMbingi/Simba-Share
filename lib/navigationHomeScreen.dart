@@ -1,11 +1,12 @@
-import 'appTheme.dart';
-import 'customDrawer/drawerUserController.dart';
-import 'customDrawer/homeDrawer.dart';
-import 'feedbackScreen.dart';
-import 'helpScreen.dart';
-import 'homeScreen.dart';
-import 'inviteFriendScreen.dart';
+import 'package:simba_share/appTheme.dart';
+import 'package:simba_share/customDrawer/drawerUserController.dart';
+import 'package:simba_share/customDrawer/homeDrawer.dart';
+import 'package:simba_share/feedbackScreen.dart';
+import 'package:simba_share/helpScreen.dart';
+import 'package:simba_share/homeScreen.dart';
+import 'package:simba_share/inviteFriendScreen.dart';
 import 'package:flutter/material.dart';
+
 
 class NavigationHomeScreen extends StatefulWidget {
   @override

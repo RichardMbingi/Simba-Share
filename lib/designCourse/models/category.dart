@@ -1,77 +1,77 @@
 class Category {
   String title;
   int lessonCount;
-  int money;
-  double rating;
+  int ltp;
+  double change;
   String imagePath;
 
   Category({
     this.title = '',
     this.imagePath = '',
     this.lessonCount = 0,
-    this.money = 0,
-    this.rating = 0.0,
+    this.ltp = 0,
+    this.change = 0.0,
   });
 
   static List<Category> categoryList = [
     Category(
       imagePath: 'assets/design_course/interFace1.png',
-      title: 'User interface Design',
+      title: 'BOC Kenya',
       lessonCount: 24,
-      money: 25,
-      rating: 4.3,
+      ltp: 25,
+      change: 4.3,
     ),
     Category(
       imagePath: 'assets/design_course/interFace2.png',
-      title: 'User interface Design',
+      title: 'Sanlam',
       lessonCount: 22,
-      money: 18,
-      rating: 4.6,
+      ltp: 18,
+      change: 4.6,
     ),
     Category(
       imagePath: 'assets/design_course/interFace1.png',
-      title: 'User interface Design',
+      title: 'BAT',
       lessonCount: 24,
-      money: 25,
-      rating: 4.3,
+      ltp: 25,
+      change: 4.3,
     ),
     Category(
       imagePath: 'assets/design_course/interFace2.png',
-      title: 'User interface Design',
+      title: 'Athi River Mining',
       lessonCount: 22,
-      money: 18,
-      rating: 4.6,
+      ltp: 18,
+      change: 4.6,
     ),
   ];
 
   static List<Category> popularCourseList = [
     Category(
       imagePath: 'assets/design_course/interFace3.png',
-      title: 'App Design Course',
+      title: 'Limuru Tea',
       lessonCount: 12,
-      money: 25,
-      rating: 4.8,
+      ltp: 25,
+      change: 4.8,
     ),
     Category(
       imagePath: 'assets/design_course/interFace4.png',
-      title: 'Web Design Course',
+      title: 'Williamson Tea Kenya',
       lessonCount: 28,
-      money: 208,
-      rating: 4.9,
+      ltp: 208,
+      change: 4.9,
     ),
     Category(
       imagePath: 'assets/design_course/interFace3.png',
-      title: 'App Design Course',
+      title: 'CFC Stanbic Holdings',
       lessonCount: 12,
-      money: 25,
-      rating: 4.8,
+      ltp: 25,
+      change: 4.8,
     ),
     Category(
       imagePath: 'assets/design_course/interFace4.png',
-      title: 'Web Design Course',
+      title: 'Sameer Africa',
       lessonCount: 28,
-      money: 208,
-      rating: 4.9,
+      ltp: 208,
+      change: 4.9,
     ),
   ];
 }
