@@ -19,7 +19,9 @@ class _LoginPageState extends State<LoginPage> {
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
           hintText: "Email",
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(32.0),
+          ),
+          ),
       validator: (input) {
         if (input.isEmpty) {
           return 'Please Enter Email Address';
@@ -50,6 +52,10 @@ class _LoginPageState extends State<LoginPage> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: signIn,
+        child: Text("Login",
+          textAlign: TextAlign.center,
+          style: style.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
       ),
     ); //?Log In Button
 
@@ -57,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Center(
         child: Container(
-          color: Colors.black,
+          color: Color(0xfff56f5c),
           child: Padding(
             padding: const EdgeInsets.all(36.0),
             child: Column(
@@ -67,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                 SizedBox(
                   height: 155.0,
                   child: Image.asset(
-                    "assets/images/lion.png",
+                    "assets/images/Logo.png",
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -83,102 +89,6 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
-        // resizeToAvoidBottomPadding: false,
-        // body: Container(
-        //   decoration: BoxDecoration(
-        //     gradient: LinearGradient(
-        //       begin: Alignment.topRight,
-        //       end: Alignment.bottomCenter,
-        //       stops: [0.1, 1.0],
-        //       colors: [
-        //         Color(0xFC635D),
-        //         Color(0x7E4BFF),
-        //       ],
-        //     ),
-        //   ),
-        //   child: Form(
-        //     key: _formKey,
-        //     child: Column(
-        //       crossAxisAlignment: CrossAxisAlignment.center,
-        //       children: <Widget>[
-        //         //?Logo
-        //         Padding(
-        //           padding: const EdgeInsets.only(top: 120.0, bottom: 40.0),
-        //           child: Image(
-        //             image: AssetImage('assets/images/logo.svg'),
-        //           ),
-        //         ),
-
-        //         //?Log Title
-        //         Padding(
-        //           padding: const EdgeInsets.only(top: 0.0, bottom: 20.0),
-        //           child: Text(
-        //             "Log In",
-        //             style: TextStyle(fontSize: 40),
-        //           ),
-        //         ),
-
-
-
-                
-        //         // Padding(
-        //         //   padding: const EdgeInsets.symmetric(
-        //         //       horizontal: 20.0, vertical: 0.0),
-        //         //   child: TextFormField(
-        //         //     validator: (input) {
-        //         //       if (input.isEmpty) {
-        //         //         return 'Please Enter Email Address';
-        //         //       } //! input validation
-        //         //     },
-        //         //     onSaved: (input) => _email = input,
-        //         //     decoration: InputDecoration(
-        //         //       contentPadding:
-        //         //           EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        //         //       hintText: "Email",
-        //         //       fillColor: Colors.transparent,
-        //         //       border: OutlineInputBorder(
-        //         //           borderRadius: BorderRadius.circular(32.0)),
-        //         //     ),
-        //         //   ),
-        //         // ),
-
-                
-        //         // Padding(
-        //         //   padding: const EdgeInsets.symmetric(
-        //         //       horizontal: 20.0, vertical: 0.0),
-        //         //   child: TextFormField(
-        //         //     validator: (input) {
-        //         //       if (input.length < 6) {
-        //         //         return 'Your password should have at leat 6 characters';
-        //         //       } //! input validation
-        //         //     },
-        //         //     onSaved: (input) => _password = input,
-        //         //     decoration: InputDecoration(
-        //         //       contentPadding:
-        //         //           EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        //         //       hintText: "Password",
-        //         //       fillColor: Colors.transparent,
-        //         //       border: OutlineInputBorder(
-        //         //           borderRadius: BorderRadius.circular(32.0)),
-        //         //     ),
-        //         //     obscureText: true,
-        //         //   ),
-        //         // ),
-
-                
-        //         // Padding(
-        //         //   padding: const EdgeInsets.only(top: 30),
-        //         //   child: RaisedButton(
-        //         //     onPressed: signIn,
-        //         //     child: Text(
-        //         //       'Enter',
-        //         //     ),
-        //         //   ),
-        //         // )
-        //       ],
-        //     ),
-        //   ),
-        // )
     );
   }
 
