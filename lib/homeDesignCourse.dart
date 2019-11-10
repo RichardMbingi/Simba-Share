@@ -1,6 +1,6 @@
-import 'package:simba_share/designCourse/categoryListView.dart';
-import 'package:simba_share/designCourse/courseInfoScreen.dart';
-import 'package:simba_share/designCourse/popularCourseListView.dart';
+import 'package:simba_share/categoryListView.dart';
+import 'package:simba_share/courseInfoScreen.dart';
+import 'package:simba_share/popularCourseListView.dart';
 import 'package:simba_share/main.dart';
 import 'package:flutter/material.dart';
 import 'designCourseAppTheme.dart';

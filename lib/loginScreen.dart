@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:simba_share/homeScreen.dart';
-import 'package:simba_share/designCourse/homeDesignCourse.dart';
+import 'package:simba_share/homeDesignCourse.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
