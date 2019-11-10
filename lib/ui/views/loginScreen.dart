@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:simba_share/homeDesignCourse.dart';
 import 'package:flutter/material.dart';
+import 'package:simba_share/ui/views/homeDesignCourse.dart';
 
 class LoginPage extends StatefulWidget {
   @override

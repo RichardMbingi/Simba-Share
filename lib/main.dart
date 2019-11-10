@@ -1,8 +1,8 @@
 import 'dart:io';
-import 'appTheme.dart';
+import 'package:simba_share/ui/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:simba_share/loginScreen.dart';
+import 'package:simba_share/ui/views/views.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations(

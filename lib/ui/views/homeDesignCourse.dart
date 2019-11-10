@@ -1,10 +1,10 @@
-import 'package:simba_share/categoryListView.dart';
-import 'package:simba_share/courseInfoScreen.dart';
-import 'package:simba_share/popularCourseListView.dart';
 import 'package:simba_share/main.dart';
 import 'package:flutter/material.dart';
-import 'designCourseAppTheme.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:simba_share/ui/shared/designCourseAppTheme.dart';
+import 'package:simba_share/ui/views/categoryListView.dart';
+import 'package:simba_share/ui/views/courseInfoScreen.dart';
+import 'package:simba_share/ui/views/popularCourseListView.dart';
 
 class DesignCourseHomeScreen extends StatefulWidget {
 
