@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simba_share/ui/shared/designCourseAppTheme.dart';
+import 'package:simba_share/ui/shared/stockAppTheme.dart';
 
 class CourseInfoScreen extends StatefulWidget {
   @override

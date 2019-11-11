@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:simba_share/ui/views/homeDesignCourse.dart';
+import 'package:simba_share/ui/views/homeView.dart';
+import 'package:simba_share/ui/views/signUpView.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -23,12 +24,13 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
 
-    return new Scaffold(
-      appBar: new AppBar(),
+    return Scaffold(
+      appBar: AppBar(),
       body: Form(
           key: _formKey,
           child: Column(
             children: <Widget>[
+              //?Email textfield
               TextFormField(
                 validator: (input) {
                   if (input.isEmpty) {
@@ -38,6 +40,8 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: InputDecoration(labelText: 'Email'),
                 onSaved: (input) => _email = input,
               ),
+
+              //?Password textfield
               TextFormField(
                 validator: (input) {
                   if (input.length < 6) {
@@ -48,12 +52,16 @@ class _LoginPageState extends State<LoginPage> {
                 onSaved: (input) => _password = input,
                 obscureText: true,
               ),
+
+              //?Log in button
               RaisedButton(
                 onPressed: signIn,
                 child: Text('Sign in'),
               ),
-              new FlatButton(
-                child: new Text('Create an account'),
+
+              //?Sign up link
+              FlatButton(
+                child: Text('Create an account'),
                 onPressed: userRegister,
               )
             ],
@@ -78,6 +86,9 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void userRegister() {
-    
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => SignUpView()),
+    );
   }
 }

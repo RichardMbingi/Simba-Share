@@ -49,4 +49,3 @@ class HexColor extends Color {
   HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
 
-//TODO: Remove unnecessary pages 

@@ -1,2 +1,2 @@
 export 'appTheme.dart';
-export 'designCourseAppTheme.dart';
+export 'stockAppTheme.dart';

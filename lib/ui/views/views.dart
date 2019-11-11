@@ -1,4 +1,4 @@
-export 'loginScreen.dart';
-export 'homeDesignCourse.dart';
+export 'loginView.dart';
+export 'homeView.dart';
 export 'categoryListView.dart';
-export 'courseInfoScreen.dart';
+export 'stockInfoScreen.dart';
