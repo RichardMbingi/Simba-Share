@@ -6,17 +6,17 @@ import 'package:simba_share/ui/views/categoryListView.dart';
 import 'package:simba_share/ui/views/stockInfoScreen.dart';
 import 'package:simba_share/ui/views/popularStockListView.dart';
 
-class DesignCourseHomeScreen extends StatefulWidget {
+class HomeView extends StatefulWidget {
 
-  const DesignCourseHomeScreen({Key key,@required this.user}) : super(key: key);
+  const HomeView({Key key,@required this.user}) : super(key: key);
 
   final AuthResult user;
 
   @override
-  _DesignCourseHomeScreenState createState() => _DesignCourseHomeScreenState();
+  _HomeViewState createState() => _HomeViewState();
 }
 
-class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
+class _HomeViewState extends State<HomeView> {
   CategoryType categoryType = CategoryType.favourites;
 
   @override
@@ -138,7 +138,7 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => CourseInfoScreen(),
+        builder: (context) => StockInfoScreen(),
       ),
     );
   }

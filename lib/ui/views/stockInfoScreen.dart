@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:simba_share/ui/shared/stockAppTheme.dart';
 
-class CourseInfoScreen extends StatefulWidget {
+class StockInfoScreen extends StatefulWidget {
   @override
-  _CourseInfoScreenState createState() => _CourseInfoScreenState();
+  _StockInfoScreenState createState() => _StockInfoScreenState();
 }
 
-class _CourseInfoScreenState extends State<CourseInfoScreen>
+class _StockInfoScreenState extends State<StockInfoScreen>
     with TickerProviderStateMixin {
   final infoHeight = 364.0;
   AnimationController animationController;

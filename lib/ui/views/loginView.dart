@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:simba_share/services/auth.dart';
 import 'package:simba_share/ui/views/homeView.dart';
 import 'package:simba_share/ui/views/signUpView.dart';
 
@@ -11,10 +12,23 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String _email, _password;
+  AuthService auth = AuthService();
+
+  @override
+  void initState() {
+    super.initState();
+    auth.getUser.then(
+      (user) {
+        if (user != null) {
+          Navigator.pushReplacementNamed(context, '/home');
+        }
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-//?Logo
+  //?Logo
     final logo = Hero(
       tag: 'hero',
       child: CircleAvatar(
@@ -62,7 +76,12 @@ class _LoginPageState extends State<LoginPage> {
               //?Sign up link
               FlatButton(
                 child: Text('Create an account'),
-                onPressed: userRegister,
+                onPressed: () async {
+                  var user = await loginMethod();
+                  if (user != null) {
+                    Navigator.pushReplacementNamed(context, '/home');
+                  }
+                },
               )
             ],
           )),
@@ -78,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => DesignCourseHomeScreen(user: user)));
+                builder: (context) => HomeView(user: user)));
       } catch (e) {
         print(e.message);
       }
@@ -91,4 +110,7 @@ class _LoginPageState extends State<LoginPage> {
       MaterialPageRoute(builder: (context) => SignUpView()),
     );
   }
+}
+
+loginMethod() {
 }
